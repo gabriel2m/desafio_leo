@@ -9,6 +9,8 @@ services:
         volumes:
             - .:/srv/app
             - ./.docker/app/php.ini:/usr/local/etc/php/php.ini
+        env_file:
+            - .env
         networks:
             - app
         extra_hosts:
